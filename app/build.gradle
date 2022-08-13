@@ -43,4 +43,6 @@ dependencies {
 
 
     // Add RecyclerView Library here
+    // RecyclerView Library
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
 }
