@@ -1,6 +1,8 @@
 package com.example.project_2_recyclerview_app.adapter
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.service.autofill.Dataset
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +23,7 @@ class restaurantAdapter(
     class resturntViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.item_title)
         val imageView: ImageView = view.findViewById(R.id.item_image)
+
     }
 
 
@@ -31,6 +34,9 @@ class restaurantAdapter(
         val adapterLayout = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_layout, parent, false)
 
+
+
+
         return resturntViewHolder(adapterLayout)
     }
 
@@ -40,6 +46,8 @@ class restaurantAdapter(
         val item = dataset[position]
         holder.textView.text = context.resources.getString(item.resturntStringId)
         holder.imageView.setImageResource(item.resturntImageId)
+
+
     }
 
     // تحدد عدد البيانات في القائمة
